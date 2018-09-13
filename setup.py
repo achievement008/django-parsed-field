@@ -2,8 +2,8 @@ from setuptools import setup
 
 setup(
     name='django-parsed-field',
-    version='1.0',
-    packages=['django-parsed-field'],
+    version='1.0.0',
+    packages=['parsedfield'],
     url='https://github.com/achievement008/django-parsed-field',
     license='MIT',
     author='proofx',
