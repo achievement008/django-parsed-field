@@ -1,0 +1,11 @@
+.coverage
+.tox
+htmlcov
+*.pyc
+build/
+dist/
+MANIFEST
+.project
+.pydevproject
+.DS_Store
+.idea/*
