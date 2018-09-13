@@ -19,6 +19,8 @@ class Command(BaseCommand):
             else:
                 if field.split('.')[-1] not in [i.name for i in model.model_class()._meta.fields]:
                     self.stdout.write(self.style.ERROR('Field "%s" not found in model fields' % field.split('.')[-1]))
+                elif model.model_class()._meta.get_field(field.split('.')[-1]).__class__.__name__ != 'JSONParsedField':
+                    self.stdout.write(self.style.ERROR('Field "%s" must be type of JSONParsedField' % field.split('.')[-1]))
                 else:
                     rules_creater = RulesDictCreator()
                     rules_creater.start()
